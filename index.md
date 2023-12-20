@@ -20,7 +20,10 @@ Join us as we navigate the intricate web of Wikispeedia. We'll follow the paths 
 
 The Wikispeedia game dataset is a collection of 4604 articles spanning 129 semantical categories from geography to . 
 
+<iframe src="html_plots/Incoming_plot.html" width="100%" height="600"></iframe>
 
+
+<iframe src="html_plots/Outgoing_plot.html" width="100%" height="600"></iframe>
 
 Players are tasked to go from one article to the other using the intr :
 
