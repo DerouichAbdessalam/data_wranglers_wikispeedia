@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "NAVIGATING THE MAZE OF THE MIND"
-background: '/img/brain-img-2.webp'
+background: '/img/brain.png'
 ---
 
 ### INTRODUCTION : 
