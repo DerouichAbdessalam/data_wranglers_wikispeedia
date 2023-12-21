@@ -42,6 +42,23 @@ Even more fascinating, by isolating the paths of veteran players, we see a clear
 **Part 4: The Odyssey of an Exceptional Player**
 
 But there's an outlier in our adventure: a player who's navigated through about 5000 games. What’s the story behind this marathon of the mind? This player is like a rare gem in our exploration, offering a unique perspective into the intricate workings of a seasoned Wikispeedia navigator. Let’s dive into this exceptional journey and see what secrets we can uncover.
+
+<div id="basePlotUrl" data-url="{{ 'html_plots/interactive_pyramids/plot_path_length_' | prepend: site.baseurl }}"></div>
+
+<input type="range" min="4" max="25" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
+<p>Path Length: <span id="pathLengthValue">4</span></p>
+<div id="plotContainer">
+    <iframe id="plotFrame" src="{{ 'html_plots/interactive_pyramids/plot_path_length_4.html' | prepend: site.baseurl }}" width="100%" height="600" frameborder="0"></iframe>
+</div>
+
+<script>
+function updatePlot(value) {
+    var basePlotUrl = document.getElementById("basePlotUrl").getAttribute("data-url");
+    document.getElementById("pathLengthValue").innerText = value;
+    document.getElementById("plotFrame").src = basePlotUrl + value + '.html';
+}
+</script>
+
 <iframe src="html_plots/Incoming_plot.html" width="100%" height="600"></iframe>
 
 
