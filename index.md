@@ -64,9 +64,9 @@ But there's an outlier in our adventure: a player who's navigated through about 
 
 <script>
 function updatePlot(value) {
-    var basePlotUrl = document.getElementById("basePlotUrl").getAttribute("data-url");
     document.getElementById("pathLengthValue").innerText = value;
     document.getElementById("plotFrame").src = "html_plots/interactive_pyramids/plot_path_length_" + value + '.html';
+    cosole.log(value);
 }
 </script>
 
