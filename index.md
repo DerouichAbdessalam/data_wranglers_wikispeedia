@@ -135,7 +135,7 @@ In first game plays, players tend to explore various strategies
 without a clear and efficient pattern. 
 
 The idea here is to visualize the evolution of the semantic links through 
-a metric we defined depending on the weights of the links between catefories (found in the heatmaps). 
+a metric we defined depending on the weights of the links between categories (found in the heatmaps). 
 This metric is then used to extract the distances separating the categories to
 create a scatter plot that translates the semantic closeness of the categories. 
 
@@ -211,7 +211,7 @@ However, for Design & Tech, Religion, and Language & Litterature although
 **initially slower**, have shown over time remarkable improvement.  
 It’s like unlocking a secret power-up, making leaps in understanding! 
 
-So, our intrepid Wikispeedia player, initially more lost than a tourist without a map in Design & Tech, Religion, and Language & Literature, has turned into a seasoned navigator. It's like they've cracked the code, moving from 'Where am I?' to 'I've got this!' in record time. They've transformed their journey from a meandering stroll through Wikipedia's corridors into a high-speed chase for knowledge, outpacing their past self with the finesse of a trivia maestro. It's a classic tale of the underdog turned unexpected hero in the world of digital exploration.
+So, our intrepid Wikispeedia player, initially more lost than a tourist without a map in Design & Tech, Religion, and Language & Literature, has turned into a seasoned navigator. It's like they've cracked the code, moving from 'Where am I?' to 'I've got this!' in record time. They've transformed their journey from a meandering stroll through Wikipedia's corridors into a high-speed chase for knowledge, outpacing their past self with the finesse of a trivia maestro. 
 
 <div class="center-content">
     <img src="hang.gif" alt="GIF Alt Text">
