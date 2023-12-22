@@ -21,7 +21,7 @@ In an attempt to connect the dots between a source and a target article, players
 - 256,585 successful attempts paths where the target was reached
 - 149,250 unsuccessful attempts
 
-Since we're trying to leverage the player behaviour to map their cognitive patterns, we need to take a stop 
+Since we're trying to leverage the player's behaviour to map their cognitive patterns, we need to take a stop 
 and analyze what makes a difference between successful and unsuccessful players. Do successful players simply "know better"
 or is there something deeper in the works ?
 
@@ -29,14 +29,14 @@ or is there something deeper in the works ?
 
 **What's the game plan coach ?**
 
-The first layer to a player's knowledge is their strategy. Imagine trying to go from point A to B in an unfamiliar town (no GPS allowed of course), how would you procede ? 
+The first layer of a player's knowledge is their strategy. Imagine trying to go from point A to B in an unfamiliar town (no GPS allowed of course), how would you proceed? 
 
 You’d likely try to find your way to a central location like the town square, and proceed from there.
 Something very similar is observed in the basic strategy that players, whether they finish 
 the path or not.
 
-To uncover this strategy we need a measure of "popularity" of a stop (article)
-However we should take into account the unbalanced nature of our links, the in link out link
+To uncover this strategy we need a measure of the "popularity" of an article.
+However, we should take into account the unbalanced nature of our links, the in-link out-link
 distribution is different between the two :
 
 <iframe src="html_plots/Incoming_plot_line.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
@@ -81,7 +81,7 @@ As we suposed, players take a hike, find a good "peak" and try
 to go down as fast as possible to the target, when they fail, they 
 repeat the procedure again, until they succed or get too tired of hiking !
 
-<img src="tired_kid.png" alt=" tirekid image" width="100%" height="600">
+<img src="tired_kid.png" alt=" tirekid image" width="70%" height="400">
 
 Since this strategy is common to both successful and unsuccessful 
 players, we need to dig a bit deeper to see if there is a true difference between 
@@ -99,10 +99,10 @@ are not only tightly connected in the structure of the game (since the link betw
 but the player knowingly chose to take them therefore justifying 
 their use as a connection index, we can observe the following 
 connections : 
-- hmap_down_finished : 
+- **Heat map of the finished Down Paths:** 
 <iframe src="html_plots/heat_maps/heatmap_down_fin.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
-- hmap_down_unfinished : 
+- **Heat map of the unfinished Down Paths:** 
 <iframe src="html_plots/heat_maps/heatmap_down_unf.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 Aha, the patterns are different ! But wait these plots actually prove 
@@ -113,7 +113,7 @@ is simply a hard one
 // TO DO, add in degree task ?
 
 Now we know that all paths contain breadcrumbs to player cognitive connections, 
-all taht ias left now is to follow them : 
+all that is left now is to follow them : 
 
 ---
 
