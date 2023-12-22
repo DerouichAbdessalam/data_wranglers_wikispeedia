@@ -86,7 +86,7 @@ function updatePlot(value) {
 
 As we suposed, players take a hike, find a good "peak" and try 
 to go down as fast as possible to the target, when they fail, they 
-repeat the procedure again, until they succed or get too tired of hiking !
+repeat the procedure again, until they succeed or get too tired of hiking !
 
 Since this strategy is common to both successful and unsuccessful 
 players, we need to dig a bit deeper to see if there is a true difference between 
@@ -144,7 +144,7 @@ We take care of removing the outliers keeping only the players that played betwe
 
 We compare first plays **Before training**
 against last plays **After training** to gain insights on the learning process 
-of player, we present here the evolution of 5 of these categories :
+of player, we present here the evolution of 4 of these categories :
 
 <!-- HTML for Dropdown Menu -->
 <select id="categorySelect" onchange="updateImage()">
