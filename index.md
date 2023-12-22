@@ -81,8 +81,6 @@ As we suposed, players take a hike, find a good "peak" and try
 to go down as fast as possible to the target, when they fail, they 
 repeat the procedure again, until they succed or get too tired of hiking !
 
-<img src="tired_kid.png" alt=" tirekid image" width="70%" height="400">
-
 Since this strategy is common to both successful and unsuccessful 
 players, we need to dig a bit deeper to see if there is a true difference between 
 them.
@@ -107,10 +105,11 @@ connections :
 
 Aha, the patterns are different ! But wait these plots actually prove 
 that unsuccessful players explore more connections that succesful ones, 
-hence play success is independant of strategy and knowledge. Sometimes the game task
-is simply a hard one 
+hence play success is independant of strategy and knowledge. it is maily related to the game instance.
 
-// TO DO, add in degree task ?
+<div class="center-content">
+    <img src="meme_spidey.png" alt="spiderman meme" width="80%" height="400">
+</div>
 
 Now we know that all paths contain breadcrumbs to player cognitive connections, 
 all that is left now is to follow them : 
@@ -173,12 +172,6 @@ Now, who's the mastermind behind these moves? Hey Bob, it’s not you, right? Yo
 
 
 ---
-
-**Plots**
-
-
-
-
 
 <!-- category frequency plot -->
 <!-- ========================= -->
