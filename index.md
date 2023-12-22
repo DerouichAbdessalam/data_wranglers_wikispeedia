@@ -58,14 +58,13 @@ This is where the PageRank algorithm enters the fray, providing us with a robust
 
 <div class="center-content">
     <p>Path Length: <span id="pathLengthValue">4</span> </p>
+</div>
+<div class="center-content">
     <input type="range" min="4" max="20" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
 </div>
 <div id="plotContainer" width="100%" class="center-content">
     <iframe id="plotFrame" src="html_plots/interactive_pyramids/plot_path_length_4.html" width="100%" height="400" frameborder="0"></iframe>
 </div>
-
-
-
 
 
 <script>
