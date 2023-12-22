@@ -79,10 +79,10 @@ function updatePlot(value) {
 
 <!-- degree frequency plot -->
 
-<iframe src="html_plots/Incoming_plot.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/Incoming_plot_line.html" width="100%" height="600"></iframe>
 
 
-<iframe src="html_plots/Outgoing_plot.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/Outgoing_plot_line.html" width="100%" height="600"></iframe>
 
 
 <!-- ========================= -->
