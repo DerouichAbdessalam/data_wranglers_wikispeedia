@@ -3,14 +3,18 @@ layout: page
 title: "NAVIGATING THE MAZE OF THE MIND"
 background: '/img/brain.png'
 ---
-**Intro: The Enigmatic World of Wikispeedia**
+## Intro: The Enigmatic World of Wikispeedia ##
 
 Our minds are complex instruments, constantly composing thoughts, yet we know so little about the notes behind the music. Usually discreet, our brains occasionally let the curtain slip, revealing their inner workings in unexpected settings. 
 Enter Wikispeedia: a cognitive revelation hidden in a simple game. Players dart from one Wikipedia article to the next, aiming for a target. As they navigate, they leave behind a trail of thoughts. What secrets do these trails unravel about the voyagers? 
-Dive in and with us as we explore these mental pathways.
+Take a trip with us as we explore these mental pathways.
+
+<div class="center-content">
+    <img src="school_bus_img.jpeg" alt="bus" width="80%" height="450">
+</div>
 
 ---
-**Game Characteristics - Cracking the Wikispeedia Enigma**
+## Game Characteristics - Cracking the Wikispeedia Enigma ##
 
 To crack the code of player behavior, we first need to understand the game's properties. 
 In Wikispeedia players journey through a maze of Wikipedia articles 4604 articles spanning 129 semantical categories from Geography, History, Technology, you name it !
@@ -27,7 +31,7 @@ or is there something deeper in the works ?
 
 ---
 
-**What's the game plan coach ?**
+## What's the game plan coach ? ##
 
 The first layer of a player's knowledge is their strategy. Imagine trying to go from point A to B in an unfamiliar town (no GPS allowed of course), how would you proceed? 
 
@@ -108,7 +112,7 @@ that unsuccessful players explore more connections that succesful ones,
 hence play success is independant of strategy and knowledge. it is maily related to the game instance.
 
 <div class="center-content">
-    <img src="meme_spidey.png" alt="spiderman meme" width="80%" height="400">
+    <img src="meme_spidey.png" alt="spiderman meme" width="80%" height="350">
 </div>
 
 Now we know that all paths contain breadcrumbs to player cognitive connections, 
@@ -116,16 +120,27 @@ all that is left now is to follow them :
 
 ---
 
-**Extracting the Juice**
+## Extracting the Juice ##
 
-Now that we know where to look and what to look for : – the aggregate paths and proximity metrics – we conjure up a mind map of the major cognitive connections. 
+Let's delve into the learning behaviour of the players. 
+In first game plays, players tend to explore various strategies 
+without a clear and efficient pattern. 
 
-Even more fascinating, by isolating the paths of veteran players, we see a clear evolution from their early attempts to their later, more refined strategies. What emerges is a collective portrait of cognitive growth.
+The idea here is to visualize the evolution of the semantic links through 
+a metric we defined depending on the weights of the links between catefories (found in the heatmaps). 
+This metric is then used to extract the distances separating the categories to
+create a scatter plot that translates the semantic closeness of the categories. 
+
+We take care of removing the outliers keeping only the players that played between 
+30 and 250 games.
+
+We compare first plays **Before training**
+against last plays **After training** to gain insights on the learning process 
+of player, we present here the evolution of 5 of these categories :
 
 <!-- HTML for Dropdown Menu -->
 <select id="categorySelect" onchange="updateImage()">
     <option value="1" selected>Astronomy</option>
-    <option value="2">Mammals</option>
     <option value="3">Food and Agriculture</option>
     <option value="4">Engineering</option>
     <option value="5">Plants</option>
@@ -148,6 +163,23 @@ function updateImage() {
 }
 </script>
 
+The pre-training plots show a central node surrounded by 
+many nearby nodes, indicating a stage of exploration. The proximity of these 
+nodes to the central one suggests an initial understanding of the game but without optimizations (tricks and shortcuts).
+
+In contrast, post-training plots illustrate two significant changes : 
+
+- There are **fewer nodes near the center** target, but they are much closer! This shows that players are now focusing on more effective 
+strategies that bring them closer to their goals.
+- There is an **increased distance** of the other 
+nodes from the center reflects a discard of less useful paths. 
+
+
+Essentialy, when we look at the progress of experienced players,
+we can clearly see how they improve from their initial tries to their
+more advanced techniques later on. This shows us how their their cognitive map of the game sharpens !
+
+
 
 <iframe src="html_plots/network_graph-3.html" width="100%" height="600"></iframe>
 
@@ -155,23 +187,29 @@ function updateImage() {
 
 
 
+
 ---
-**The Odyssey of an Exceptional Player**
-
-But there's an outlier in our adventure: a player who's navigated through about 5000 games. What’s the story behind this marathon ? This player is like a rare gem in our exploration, offering a unique perspective into the intricate workings of a seasoned Wikispeedia navigator. Let’s dive into his journey and see what secrets we can uncover.
- Picture this: our clever player seems a bit lackluster about IT and Geography, spending notably more time there (p-values trend towards significance, t-values indicate negativity for both). But hold on tight—Math, Music, Science, Art, and Everyday Life? They breeze through these like pros! Statistical trends indicate consistent performance (p-values suggest non-significance, t-values hover around neutrality).
-
-Now, here’s the inside scoop: Design & Tech, Religion, and Language & Lit? Initially slower, but guess what? Over time, they've shown remarkable improvement (p-values indicate statistical significance, t-values indicate positivity)! It's like unlocking a secret power-up, making leaps in understanding!
-
-At the start, they seemed less familiar with these topics, but bam! After a few rounds, they picked up the pace. It's crystal clear—they’re building sharper skills, strengthening cognitive connections with every play. It's akin to leveling up in a video game—but with knowledge!
-
-Now, who's the mastermind behind these moves? Hey Bob, it’s not you, right? You've conquered the realm of IT! But could this be one of our math mavens? Crunching numbers by day, humming tunes by night, and suddenly excelling in areas they initially found about as thrilling as watching paint dry? Looks like we’ve got a clever player evolving strategically, supported by statistical trends that indicate rapid growth in previously unfamiliar territories!
-
+## The Odyssey of an Exceptional Player ##
+But there’s an outlier in our adventure: a player who’s navigated through about 5000 games. What’s the story behind this marathon? This player is like a rare gem in our exploration, offering a unique perspective into the intricate workings of a seasoned Wikispeedia navigator. In our analysis, we use p-values and t-test values to examine a key hypothesis: Does the time taken to find the final destination in a given category vary significantly after the player has played many games? A **smaller p-value** (at the 0.1 threshold) suggests a **significant change in time spent**, on the other hand the t-value indicates the nature of this change: 
+- **Negative t-values** mean the player is becoming slower
+- **Positive t-values** suggest the player is learning faster, mastering the category quicker 
 <iframe src="html_plots/p_values_plot.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 <iframe src="html_plots/t_values_plot.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
+In IT and Geography, the **significant p-values and negative t-values**
+indicate they are taking more time in these categories. 
+This slowing down might be due to a more methodical approach, 
+perhaps seeking a decision to **focus on accuracy in complex areas** 
 
+However, for Design & Tech, Religion, and Language & Litterature although
+**initially slower**, have shown over time remarkable improvement.  
+It’s like unlocking a secret power-up, making leaps in understanding! 
+
+So, our intrepid Wikispeedia player, initially more lost than a tourist without a map in Design & Tech, Religion, and Language & Literature, has turned into a seasoned navigator. It's like they've cracked the code, moving from 'Where am I?' to 'I've got this!' in record time. They've transformed their journey from a meandering stroll through Wikipedia's corridors into a high-speed chase for knowledge, outpacing their past self with the finesse of a trivia maestro. It's a classic tale of the underdog turned unexpected hero in the world of digital exploration.
 ---
+
+## Conclusion : ##
+
 
 <!-- category frequency plot -->
 <!-- ========================= -->
