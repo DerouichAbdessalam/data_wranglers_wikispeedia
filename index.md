@@ -7,15 +7,15 @@ background: '/img/brain.png'
 
 Our minds are complex instruments, constantly composing thoughts, yet we know so little about the notes behind the music. Usually discreet, our brains occasionally let the curtain slip, revealing their inner workings in unexpected settings. 
 Enter Wikispeedia: a cognitive revelation hidden in a simple game. Players dart from one Wikipedia article to the next, aiming for a target. As they navigate, they leave behind a trail of thoughts. What secrets do these trails unravel about the voyagers? 
-Dive in and with us as ew explore these mental pathways.
+Dive in and with us as we explore these mental pathways.
 
 ---
-**art 1: Game Characteristics - Cracking the Wikispeedia Enigma**
+**Game Characteristics - Cracking the Wikispeedia Enigma**
 
-To crack the code of player behavior, we first need to understand the game's properties. in Wikispeedia players journey through a maze of Wikipedia articles 4604 articles spanning 129 semantical categories from Geography, History, Technology, you name it !
+To crack the code of player behavior, we first need to understand the game's properties. 
+In Wikispeedia players journey through a maze of Wikipedia articles 4604 articles spanning 129 semantical categories from Geography, History, Technology, you name it !
 
-<iframe src="html_plots/category_frequency.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
-
+<iframe src="html_plots/proprtion_per_cat.html" width="100%" height="600"  style="box-shadow: none; border: none;"></iframe>
 
 In an attempt to connect the dots between a source and a target article, players have weaved 405,835 paths :
 - 256,585 successful attempts paths where the target was reached
@@ -27,7 +27,7 @@ or is there something deeper in the works ?
 
 ---
 
-**Part 2: What's the game plan coach ?**
+**What's the game plan coach ?**
 
 The first layer to a player's knowledge is their strategy. Imagine trying to go from point A to B in an unfamiliar town (no GPS allowed of course), how would you procede ? 
 
@@ -48,12 +48,25 @@ Therefore simply basing  the degree isn't sufficient.
 This is where the PageRank algorithm enters the fray, providing us with a robust measure of an article’s stature within the game.
 
 <!-- pyramids plot -->
+<style>
+        .center-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+</style>
 
-<input type="range" min="4" max="20" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
-<p>Path Length: <span id="pathLengthValue">4</span></p>
-<div id="plotContainer">
-    <iframe id="plotFrame" src="html_plots/interactive_pyramids/plot_path_length_4.html" width="800" height="600" frameborder="0"></iframe>
+<div class="center-content">
+    <p>Path Length: <span id="pathLengthValue">4</span> </p>
+    <input type="range" min="4" max="20" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
 </div>
+<div id="plotContainer" width="100%" class="center-content">
+    <iframe id="plotFrame" src="html_plots/interactive_pyramids/plot_path_length_4.html" width="100%" height="400" frameborder="0"></iframe>
+</div>
+
+
+
+
 
 <script>
 function updatePlot(value) {
@@ -77,7 +90,7 @@ them.
 
 Luckily now that we have the clear distinction between the two phases of the game :
 - Up Path : looking for the highest first peak 
-- Down Path : going down from the peak tofind the target 
+- Down Path : going down from the peak to find the target 
 
 We have isolated where player cognition (and connections between categories) come into play :
 the risky Down path, here players show off their knowledge and 
@@ -88,10 +101,10 @@ but the player knowingly chose to take them therefore justifying
 their use as a connection index, we can observe the following 
 connections : 
 - hmap_down_finished : 
-<iframe src="html_plots/heat_maps/hmap_down_finished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
+<iframe src="html_plots/heat_maps/heatmap_down_fin.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 - hmap_down_unfinished : 
-<iframe src="html_plots/heat_maps/hmap_down_unfinished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
+<iframe src="html_plots/heat_maps/heatmap_down_unf.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 Aha, the patterns are different ! But wait these plots actually prove 
 that unsuccessful players explore more connections that succesful ones, 
@@ -105,70 +118,15 @@ all taht ias left now is to follow them :
 
 ---
 
-**Part 3: Extracting the Juice**
+**Extracting the Juice**
 
 Now that we know where to look and what to look for : – the aggregate paths and proximity metrics – we conjure up a mind map of the major cognitive connections. 
 
 Even more fascinating, by isolating the paths of veteran players, we see a clear evolution from their early attempts to their later, more refined strategies. What emerges is a collective portrait of cognitive growth.
 
----
-**Part 4: The Odyssey of an Exceptional Player**
-
-But there's an outlier in our adventure: a player who's navigated through about 5000 games. What’s the story behind this marathon of the mind? This player is like a rare gem in our exploration, offering a unique perspective into the intricate workings of a seasoned Wikispeedia navigator. Let’s dive into this exceptional journey and see what secrets we can uncover.
-
-
----
-
-**Plots**
-
-
-<!-- pyramids plot -->
-
-<input type="range" min="4" max="20" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
-<p>Path Length: <span id="pathLengthValue">4</span></p>
-<div id="plotContainer">
-    <iframe id="plotFrame" src="html_plots/interactive_pyramids/plot_path_length_4.html" width="800" height="600" frameborder="0"></iframe>
-</div>
-
-<script>
-function updatePlot(value) {
-    document.getElementById("pathLengthValue").innerText = value;
-    document.getElementById("plotFrame").src = "html_plots/interactive_pyramids/plot_path_length_" + value + '.html';
-    cosole.log(value);
-}
-</script>
-<!-- ========================= -->
-
-<iframe src="html_plots/network_graph.html" width="100%" height="600"></iframe>
-
-
-<!-- degree frequency plot -->
-
-
-
-<!-- ========================= -->
-
-<!-- category frequency plot -->
-
-<iframe src="html_plots/category_frequency.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
-
-<!-- ========================= -->
-<!-- hmap plots plot -->
-<iframe src="html_plots/heat_maps/hmap_up_finished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
-
-
-<iframe src="html_plots/heat_maps/hmap_down_finished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
-
-<iframe src="html_plots/heat_maps/hmap_up_unfinished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
-
-<iframe src="html_plots/heat_maps/hmap_down_unfinished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
-
-<!-- ========================= -->
-
-
 <!-- HTML for Dropdown Menu -->
 <select id="categorySelect" onchange="updateImage()">
-    <option value="1">Astronomy</option>
+    <option value="1" selected>Astronomy</option>
     <option value="2">Mammals</option>
     <option value="3">Food and Agriculture</option>
     <option value="4">Engineering</option>
@@ -191,6 +149,41 @@ function updateImage() {
     document.getElementById('categoryImageAfter').src = imagePath2;
 }
 </script>
+
+
+<iframe src="html_plots/network_graph-3.html" width="100%" height="600"></iframe>
+
+
+
+
+
+---
+**The Odyssey of an Exceptional Player**
+
+But there's an outlier in our adventure: a player who's navigated through about 5000 games. What’s the story behind this marathon ? This player is like a rare gem in our exploration, offering a unique perspective into the intricate workings of a seasoned Wikispeedia navigator. Let’s dive into his journey and see what secrets we can uncover.
+ Picture this: our clever player seems a bit lackluster about IT and Geography, spending notably more time there (p-values trend towards significance, t-values indicate negativity for both). But hold on tight—Math, Music, Science, Art, and Everyday Life? They breeze through these like pros! Statistical trends indicate consistent performance (p-values suggest non-significance, t-values hover around neutrality).
+
+Now, here’s the inside scoop: Design & Tech, Religion, and Language & Lit? Initially slower, but guess what? Over time, they've shown remarkable improvement (p-values indicate statistical significance, t-values indicate positivity)! It's like unlocking a secret power-up, making leaps in understanding!
+
+At the start, they seemed less familiar with these topics, but bam! After a few rounds, they picked up the pace. It's crystal clear—they’re building sharper skills, strengthening cognitive connections with every play. It's akin to leveling up in a video game—but with knowledge!
+
+Now, who's the mastermind behind these moves? Hey Bob, it’s not you, right? You've conquered the realm of IT! But could this be one of our math mavens? Crunching numbers by day, humming tunes by night, and suddenly excelling in areas they initially found about as thrilling as watching paint dry? Looks like we’ve got a clever player evolving strategically, supported by statistical trends that indicate rapid growth in previously unfamiliar territories!
+
+<iframe src="html_plots/p_values_plot.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
+<iframe src="html_plots/t_values_plot.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
+
+
+---
+
+**Plots**
+
+
+
+
+
+<!-- category frequency plot -->
+<!-- ========================= -->
+
 
 
 <!-- CSS for Styling -->
