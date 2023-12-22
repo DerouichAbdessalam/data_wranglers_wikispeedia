@@ -56,10 +56,10 @@ But there's an outlier in our adventure: a player who's navigated through about 
 
 <!-- pyramids plot -->
 
-<input type="range" min="4" max="25" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
+<input type="range" min="4" max="20" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
 <p>Path Length: <span id="pathLengthValue">4</span></p>
 <div id="plotContainer">
-    <iframe id="plotFrame" src="html_plots/interactive_pyramids/plot_path_length_4.html" width="100%" height="600" frameborder="0"></iframe>
+    <iframe id="plotFrame" src="html_plots/interactive_pyramids/plot_path_length_4.html" width="800" height="600" frameborder="0"></iframe>
 </div>
 
 <script>
@@ -74,6 +74,7 @@ function updatePlot(value) {
 
 <!-- ========================= -->
 
+<iframe src="html_plots/network_graph.html" width="100%" height="600"></iframe>
 
 
 <!-- degree frequency plot -->
@@ -104,26 +105,31 @@ function updatePlot(value) {
 <!-- ========================= -->
 
 
-
 <!-- HTML for Dropdown Menu -->
 <select id="categorySelect" onchange="updateImage()">
-    <option value="category1">Category 1</option>
-    <option value="category2">Category 2</option>
-    <option value="category3">Category 3</option>
+    <option value="1">Astronomy</option>
+    <option value="2">Mammals</option>
+    <option value="3">Food and Agriculture</option>
+    <option value="4">Climate and Weather</option>
     <!-- Add more categories as needed -->
 </select>
 
 <!-- Image Placeholder -->
-<img id="categoryImage" src="html_plots/brain_categories_images/category1.png" alt="Category Image"/>
+
+<iframe id="categoryImageBefore" src="html_plots/brain_categories_images/categories/after_training_cat1.html" width="100%" height="600"></iframe>
+<iframe id="categoryImageAfter" src="html_plots/brain_categories_images/categories/after_training_cat1.html" width="100%" height="600"></iframe>
 
 <!-- JavaScript to Update Image -->
 <script>
 function updateImage() {
     var selectedCategory = document.getElementById('categorySelect').value;
-    var imagePath = 'html_plots/brain_categories_images/' + selectedCategory + '.png';
-    document.getElementById('categoryImage').src = imagePath;
+    var imagePath1 = 'html_plots/brain_categories_images/categories/before_training_cat' + selectedCategory + '.html';
+    document.getElementById('categoryImageBefore').src = imagePath1;
+    var imagePath2 = 'html_plots/brain_categories_images/categories/after_training_cat' + selectedCategory + '.html';
+    document.getElementById('categoryImageAfter').src = imagePath2;
 }
 </script>
+
 
 <!-- CSS for Styling -->
 <style>
@@ -136,16 +142,22 @@ function updateImage() {
     font-family: 'serial'; /* Apply a font similar to the one in the image */
 }
 
-#categorySelect {
-    padding: 10px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 16px;
-    color: #007bff;
-    cursor: pointer;
+select#categorySelect {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Your Font Family', sans-serif; /* Replace 'Your Font Family' with the font family used on your website */
+    font-size: 1em; /* Adjust as needed */
+    text-align-last: center; /* For some browsers */
+    -moz-text-align-last: center; /* For Firefox */
+    -webkit-text-align-last: center; /* For Safari and Chrome */
+    !important; /* Ensures this style is prioritized */
 }
 
+/* Style the dropdown options */
+select#categorySelect option {
+    font-family: 'Your Font Family', sans-serif; /* Ensures options use the same font family */
+    !important; /* Ensures this style is prioritized */
+}
 
 #categoryImage {
     width: 100%;
