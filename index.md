@@ -79,28 +79,28 @@ function updatePlot(value) {
 
 <!-- degree frequency plot -->
 
-<iframe src="html_plots/Incoming_plot_line.html" width="100%" height="600", style="box-shadow: none;"></iframe>
+<iframe src="html_plots/Incoming_plot_line.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 
-<iframe src="html_plots/Outgoing_plot_line.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/Outgoing_plot_line.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 
 <!-- ========================= -->
 
 <!-- category frequency plot -->
 
-<iframe src="html_plots/category_frequency.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/category_frequency.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 <!-- ========================= -->
 <!-- hmap plots plot -->
-<iframe src="html_plots/heat_maps/hmap_up_finished.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/heat_maps/hmap_up_finished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 
-<iframe src="html_plots/heat_maps/hmap_down_finished.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/heat_maps/hmap_down_finished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
-<iframe src="html_plots/heat_maps/hmap_up_unfinished.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/heat_maps/hmap_up_unfinished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
-<iframe src="html_plots/heat_maps/hmap_down_unfinished.html" width="100%" height="600"></iframe>
+<iframe src="html_plots/heat_maps/hmap_down_unfinished.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 <!-- ========================= -->
 
@@ -111,13 +111,14 @@ function updatePlot(value) {
     <option value="2">Mammals</option>
     <option value="3">Food and Agriculture</option>
     <option value="4">Engineering</option>
+    <option value="5">Plants</option>
     <!-- Add more categories as needed -->
 </select>
 
 <!-- Image Placeholder -->
 
-<iframe id="categoryImageBefore" src="html_plots/brain_categories_images/categories/before_training_cat1.html" width="100%" height="600"></iframe>
-<iframe id="categoryImageAfter" src="html_plots/brain_categories_images/categories/after_training_cat1.html" width="100%" height="600"></iframe>
+<iframe id="categoryImageBefore" src="html_plots/brain_categories_images/categories/before_training_cat1.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
+<iframe id="categoryImageAfter" src="html_plots/brain_categories_images/categories/after_training_cat1.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 <!-- JavaScript to Update Image -->
 <script>
