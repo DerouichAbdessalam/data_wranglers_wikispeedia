@@ -127,7 +127,6 @@ all that is left now is to follow them :
 
 In order to get a better intuition on the proximity of the categories, we construct a graph based on the adjacency matrix of the heatmap. We see obvious patterns that we see in everyday life: When I say history, you probably think geography! When I say art, you probably think of a certain artist so the people category. 
 
-Categories like 'Science', 'Citizenship', 'People', 'Geography' are pivotal in the network as the are highly connected with the rest of the nides. This conforms our intuition on the existence of connectors for inter-category links.
 <iframe src="html_plots/network_graph-3.html" width="100%" height="600"></iframe>
 
 
