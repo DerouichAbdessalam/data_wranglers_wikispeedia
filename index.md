@@ -110,13 +110,13 @@ function updatePlot(value) {
     <option value="1">Astronomy</option>
     <option value="2">Mammals</option>
     <option value="3">Food and Agriculture</option>
-    <option value="4">Climate and Weather</option>
+    <option value="4">Engineering</option>
     <!-- Add more categories as needed -->
 </select>
 
 <!-- Image Placeholder -->
 
-<iframe id="categoryImageBefore" src="html_plots/brain_categories_images/categories/after_training_cat1.html" width="100%" height="600"></iframe>
+<iframe id="categoryImageBefore" src="html_plots/brain_categories_images/categories/before_training_cat1.html" width="100%" height="600"></iframe>
 <iframe id="categoryImageAfter" src="html_plots/brain_categories_images/categories/after_training_cat1.html" width="100%" height="600"></iframe>
 
 <!-- JavaScript to Update Image -->
