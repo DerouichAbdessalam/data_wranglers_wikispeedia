@@ -3,7 +3,7 @@ layout: page
 title: "NAVIGATING THE MAZE OF THE MIND"
 background: '/img/brain.png'
 ---
-## Intro: The Enigmatic World of Wikispeedia ##
+## The Enigmatic World of Wikispeedia ##
 
 Our minds are complex instruments, constantly composing thoughts, yet we know so little about the notes behind the music. Usually discreet, our brains occasionally let the curtain slip, revealing their inner workings in unexpected settings. 
 Enter Wikispeedia: a cognitive revelation hidden in a simple game. Players dart from one Wikipedia article to the next, aiming for a target. As they navigate, they leave behind a trail of thoughts. What secrets do these trails unravel about the voyagers? 
@@ -25,7 +25,10 @@ In an attempt to connect the dots between a source and a target article, players
 - 256,585 successful attempts paths where the target was reached
 - 149,250 unsuccessful attempts
 
-Since we're trying to leverage the player's behaviour to map their cognitive patterns, we need to take a stop 
+Since we're trying to leverage the player's behaviour to map their **cognitive patterns** we will see articles in paths from the perspective of their specific categories 
+and find the **connections between categories** that appear in that setting. 
+
+However we need to take a stop 
 and analyze what makes a difference between successful and unsuccessful players. Do successful players simply "know better"
 or is there something deeper in the works ?
 
@@ -48,7 +51,7 @@ distribution is different between the two :
 <iframe src="html_plots/Outgoing_plot_line.html" width="100%" height="600" style="box-shadow: none; border: none;"></iframe>
 
 
-Therefore simply basing  the degree isn't sufficient.
+Simply basing our popularity approach on the degree isn't sufficient, simple metrics like counting degrees may not capture the nuances of the network's structure.
 This is where the PageRank algorithm enters the fray, providing us with a robust measure of an article’s stature within the game.
 
 <!-- pyramids plot -->
@@ -122,7 +125,13 @@ all that is left now is to follow them :
 
 ## Extracting the Juice ##
 
-Let's delve into the learning behaviour of the players. 
+In order to get a better intuition on the proximity of the categories, we construct a graph based on the adjacency matrix of the heatmap. We see obvious patterns that we see in everyday life: When I say history, you probably think geography! When I say art, you probably think of a certain artist so the people category. 
+
+Categories like 'Science', 'Citizenship', 'People', 'Geography' are pivotal in the network as the are highly connected with the rest of the nides. This conforms our intuition on the existence of connectors for inter-category links.
+<iframe src="html_plots/network_graph-3.html" width="100%" height="600"></iframe>
+
+
+Now let's delve into the learning behaviour of the players. 
 In first game plays, players tend to explore various strategies 
 without a clear and efficient pattern. 
 
@@ -181,8 +190,6 @@ more advanced techniques later on. This shows us how their their cognitive map o
 
 
 
-<iframe src="html_plots/network_graph-3.html" width="100%" height="600"></iframe>
-
 
 
 
@@ -206,10 +213,18 @@ However, for Design & Tech, Religion, and Language & Litterature although
 It’s like unlocking a secret power-up, making leaps in understanding! 
 
 So, our intrepid Wikispeedia player, initially more lost than a tourist without a map in Design & Tech, Religion, and Language & Literature, has turned into a seasoned navigator. It's like they've cracked the code, moving from 'Where am I?' to 'I've got this!' in record time. They've transformed their journey from a meandering stroll through Wikipedia's corridors into a high-speed chase for knowledge, outpacing their past self with the finesse of a trivia maestro. It's a classic tale of the underdog turned unexpected hero in the world of digital exploration.
+
+<div class="center-content">
+    <img src="hang.gif" alt="GIF Alt Text">
+</div>
 ---
 
 ## Conclusion : ##
 
+In conclusion, our exploration of Wikispeedia unveiled fascinating insights into the cognitive processes of players expressed as the connection between the categories they choose. 
+While they shared a common initial strategy, the "Down Path" phase highlighted their ability to form meaningful cognitive connections between related categories. 
+Their learning behavior was evident in veteran players, who mastered unfamiliar subjects over time. 
+Essentially, our journey showed the dynamic nature of human cognition and the richness of knowledge acquisition within the Wikispeedia game.
 
 <!-- category frequency plot -->
 <!-- ========================= -->
