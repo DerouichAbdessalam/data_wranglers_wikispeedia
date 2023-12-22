@@ -56,16 +56,16 @@ But there's an outlier in our adventure: a player who's navigated through about 
 
 <!-- pyramids plot -->
 
-<div id="basePlotUrl" data-url="{{ 'html_plots/interactive_pyramids/plot_path_length_' | prepend: site.baseurl }}"></div>
-
-<input type="range" min="4" max="25" value="4" id="pathLengthSlider" onchange="updatePlot(this.value)">
+<input type="range" min="4" max="25" value="4" id="pathLengthSlider" >
 <p>Path Length: <span id="pathLengthValue">4</span></p>
+
 <div id="plotContainer">
-    <iframe id="plotFrame" src="{{ 'html_plots/interactive_pyramids/plot_path_length_4.html' | prepend: site.baseurl }}" width="100%" height="600" frameborder="0"></iframe>
+    <iframe id="plotFrame" src="html_plots/Incoming_plot.html" width="100%" height="600" frameborder="0"></iframe>
 </div>
 
 
 <!-- ========================= -->
+
 
 
 <!-- degree frequency plot -->
